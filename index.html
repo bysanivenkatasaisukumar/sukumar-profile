@@ -1,0 +1,1434 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Official portfolio of Bysani Venkata Sai Sukumar, Associate Software Engineer.">
+<title>Bysani Venkata Sai Sukumar | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #080d0b;
+    --surface: #101914;
+    --surface2: #16221a;
+    --green: #a3ff68;
+    --green2: #75d93f;
+    --white: #f4f7f3;
+    --muted: #a6b2a8;
+    --border: rgba(163,255,104,.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+section {
+    padding: 95px 0;
+    scroll-margin-top: 75px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-heading h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.section-heading h2 span {
+    color: var(--green);
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.eyebrow {
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* NAVBAR */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(8,13,11,.94);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+nav {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--green);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.nav-contact {
+    padding: 10px 18px;
+    border: 1px solid var(--green);
+    border-radius: 6px;
+    color: var(--green) !important;
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--green);
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    padding: 70px 0;
+    background:
+        radial-gradient(circle at 80% 40%, rgba(117,217,63,.09), transparent 30%),
+        radial-gradient(circle at 10% 10%, rgba(117,217,63,.06), transparent 25%);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.35fr .85fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.hero-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.18;
+    margin: 18px 0;
+}
+
+.hero-text h1 span {
+    color: var(--green);
+}
+
+.hero-text h3 {
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.hero-text > p:not(.eyebrow) {
+    max-width: 600px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 23px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: var(--green);
+    color: #10180d;
+}
+
+.btn-primary:hover {
+    background: var(--green2);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(163,255,104,.15);
+}
+
+.btn-outline {
+    color: var(--green);
+    border: 1px solid var(--green);
+}
+
+.btn-outline:hover {
+    background: var(--green);
+    color: #10180d;
+    transform: translateY(-4px);
+}
+
+/* PROFILE IMAGE */
+
+.profile-area {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.profile-frame {
+    width: 340px;
+    height: 410px;
+    padding: 10px;
+    border: 2px solid var(--green);
+    border-radius: 28px;
+    background: var(--surface);
+    box-shadow: 0 0 45px rgba(163,255,104,.13);
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.profile-frame:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 60px rgba(163,255,104,.22);
+}
+
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 19px;
+}
+
+.profile-label {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(8,13,11,.88);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+}
+
+.profile-label strong {
+    display: block;
+    color: var(--green);
+    font-size: 14px;
+}
+
+.profile-label span {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 35px;
+    align-items: stretch;
+}
+
+.about-description,
+.about-details {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px;
+}
+
+.about-description h3,
+.about-details h3 {
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.about-description h3 span,
+.about-details h3 span {
+    color: var(--green);
+}
+
+.about-description p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+}
+
+.detail-row:last-child {
+    border: none;
+}
+
+.detail-row span:first-child {
+    color: var(--muted);
+}
+
+.detail-row span:last-child {
+    text-align: right;
+    font-weight: 600;
+}
+
+/* SKILLS */
+
+.skill-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.skill-tab {
+    padding: 11px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.skill-tab:hover,
+.skill-tab.active {
+    background: var(--green);
+    color: #10180d;
+    border-color: var(--green);
+}
+
+.skill-panel {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-panel.active {
+    display: grid;
+    animation: fadeIn .35s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.skill-card {
+    background: var(--surface);
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.skill-card:hover {
+    border-color: var(--green);
+    transform: translateY(-6px);
+    background: var(--surface2);
+}
+
+.skill-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 16px;
+    color: var(--white);
+}
+
+.skill-card .skill-icon {
+    font-size: 22px;
+}
+
+.skill-card p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 13px;
+}
+
+.skill-level {
+    height: 6px;
+    background: #263329;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-level span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--green2), var(--green));
+    border-radius: 10px;
+}
+
+/* PROJECTS */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    overflow: hidden;
+    transition: .35s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--green);
+    box-shadow: 0 12px 35px rgba(0,0,0,.25);
+}
+
+.project-image {
+    height: 195px;
+    background: var(--surface2);
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.06);
+}
+
+.project-info {
+    padding: 22px;
+}
+
+.project-info h3 {
+    font-size: 16px;
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: var(--muted);
+    font-size: 12px;
+    min-height: 60px;
+}
+
+.project-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 13px;
+    color: var(--green);
+    background: rgba(163,255,104,.09);
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 14px;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* EDUCATION */
+
+.education-list {
+    max-width: 850px;
+    margin: auto;
+}
+
+.education-card {
+    display: flex;
+    gap: 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 18px;
+    transition: .3s;
+}
+
+.education-card:hover {
+    border-color: var(--green);
+    transform: translateX(5px);
+}
+
+.education-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: rgba(163,255,104,.1);
+    color: var(--green);
+    font-size: 22px;
+}
+
+.education-card h3 {
+    font-size: 17px;
+    color: var(--green);
+}
+
+.education-card h4 {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.education-card p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* CONTACT */
+
+.contact-intro {
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 650px;
+    margin: -25px auto 35px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    padding: 26px 17px;
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--green);
+    background: var(--surface2);
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 14px;
+    background: rgba(163,255,104,.1);
+    color: var(--green);
+    border-radius: 50%;
+    font-size: 21px;
+}
+
+.contact-card h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.contact-card p,
+.contact-card a {
+    font-size: 12px;
+    color: var(--muted);
+    overflow-wrap: anywhere;
+}
+
+.contact-card a:hover {
+    color: var(--green);
+}
+
+/* DECLARATION */
+
+.declaration-wrapper {
+    max-width: 850px;
+    margin: auto;
+    background: linear-gradient(145deg, #142119, #0d1510);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 45px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.declaration-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(163,255,104,.06);
+    filter: blur(50px);
+    top: -100px;
+    right: -70px;
+    border-radius: 50%;
+}
+
+.declaration-mark {
+    font-size: 40px;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.declaration-wrapper h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.declaration-wrapper h2 span {
+    color: var(--green);
+}
+
+.declaration-wrapper p {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.declaration-line {
+    width: 65px;
+    height: 3px;
+    background: var(--green);
+    margin: 25px auto;
+    border-radius: 5px;
+}
+
+.declaration-wrapper h3 {
+    font-size: 16px;
+    color: var(--green);
+    letter-spacing: 1px;
+}
+
+.declaration-wrapper small {
+    display: block;
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 25px 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+footer span {
+    color: var(--green);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 950px) {
+    .hero-content {
+        gap: 30px;
+    }
+
+    .profile-frame {
+        width: 290px;
+        height: 360px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 750px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        padding: 22px 5%;
+        background: #0d1510;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero {
+        padding: 55px 0;
+        min-height: auto;
+    }
+
+    .hero-content,
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-area {
+        grid-row: 1;
+    }
+
+    .profile-frame {
+        width: 260px;
+        height: 320px;
+    }
+
+    .hero-text > p:not(.eyebrow) {
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .skill-panel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detail-row {
+        text-align: left;
+    }
+}
+
+@media(max-width: 520px) {
+    section {
+        padding: 70px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+    .projects-grid,
+    .skill-panel,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card {
+        padding: 18px;
+    }
+
+    .declaration-wrapper {
+        padding: 30px 20px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="#home" class="logo">SUKUMAR.</a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open navigation">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact" class="nav-contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+
+            <div class="hero-text">
+                <p class="eyebrow">Welcome to my portfolio</p>
+
+                <h1>Hi, I'm <span>Bysani Venkata Sai Sukumar</span></h1>
+
+                <h3>Associate Software Engineer</h3>
+
+                <p>
+                    A passionate software engineering professional interested
+                    in developing practical applications, exploring modern
+                    technologies, and continuously improving technical skills.
+                    I enjoy learning, problem-solving, and contributing to
+                    software development projects.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Explore Projects ↗</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    <a href="https://drive.google.com/drive/folders/12iNeX0c7vyp_A4ukB0grtJp0QZBI69iG"
+                       target="_blank" rel="noopener noreferrer"
+                       class="btn btn-outline">View Resume ↗</a>
+                </div>
+            </div>
+
+            <div class="profile-area">
+                <div class="profile-frame">
+                    <img src="/suku.jpeg"
+                         alt="Bysani Venkata Sai Sukumar"
+                         onerror="this.style.display='none'; this.parentElement.style.background='#16221a';">
+                    <div class="profile-label">
+                        <strong>BYSANI VENKATA SAI SUKUMAR</strong>
+                        <span>Associate Software Engineer</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">Introduction</p>
+            <h2>About <span>Me</span></h2>
+            <p>A little more about my background and professional journey.</p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-description">
+                <h3>Who <span>I Am</span></h3>
+
+                <p>
+                    I am Bysani Venkata Sai Sukumar, currently working as
+                    an Associate Software Engineer in a supporting role.
+                </p>
+
+                <p>
+                    I have an interest in software development, programming,
+                    web technologies, backend development, databases, and
+                    IoT-based applications.
+                </p>
+
+                <p>
+                    I believe in continuous learning, teamwork, and
+                    developing practical technical skills. I aim to grow
+                    professionally while contributing to useful and
+                    reliable software solutions.
+                </p>
+            </div>
+
+            <div class="about-details">
+                <h3>Personal <span>Details</span></h3>
+
+                <div class="detail-row">
+                    <span>Full Name</span>
+                    <span>Bysani Venkata Sai Sukumar</span>
+                </div>
+
+                <div class="detail-row">
+                    <span>Profession</span>
+                    <span>Associate Software Engineer</span>
+                </div>
+
+                <div class="detail-row">
+                    <span>Work Type</span>
+                    <span>Supporting Role</span>
+                </div>
+
+                <div class="detail-row">
+                    <span>Location</span>
+                    <span>Vijayawada, India</span>
+                </div>
+
+                <div class="detail-row">
+                    <span>Languages</span>
+                    <span>English, Telugu</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">Technical Expertise</p>
+            <h2>My <span>Skills</span></h2>
+            <p>Technologies and tools I have worked with.</p>
+        </div>
+
+        <div class="skill-tabs">
+            <button class="skill-tab active" data-target="programming">Programming</button>
+            <button class="skill-tab" data-target="frontend">Frontend</button>
+            <button class="skill-tab" data-target="backend">Backend</button>
+            <button class="skill-tab" data-target="database">Database</button>
+            <button class="skill-tab" data-target="iot">IoT</button>
+            <button class="skill-tab" data-target="tools">Tools</button>
+        </div>
+
+        <div class="skill-panel active" id="programming">
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>Java</h3><span class="skill-icon">☕</span>
+                </div>
+                <p>Object-Oriented Programming and Core Java</p>
+                <div class="skill-level"><span style="width:80%"></span></div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>JavaScript</h3><span class="skill-icon">JS</span>
+                </div>
+                <p>Programming fundamentals and DOM manipulation</p>
+                <div class="skill-level"><span style="width:75%"></span></div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>Python</h3><span class="skill-icon">🐍</span>
+                </div>
+                <p>Programming fundamentals and scripting</p>
+                <div class="skill-level"><span style="width:65%"></span></div>
+            </div>
+        </div>
+
+        <div class="skill-panel" id="frontend">
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>HTML5</h3><span class="skill-icon">🌐</span>
+                </div>
+                <p>Semantic web page structure</p>
+                <div class="skill-level"><span style="width:85%"></span></div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>CSS3</h3><span class="skill-icon">🎨</span>
+                </div>
+                <p>Responsive design and styling</p>
+                <div class="skill-level"><span style="width:80%"></span></div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>JavaScript</h3><span class="skill-icon">JS</span>
+                </div>
+                <p>Interactive frontend functionality</p>
+                <div class="skill-level"><span style="width:75%"></span></div>
+            </div>
+        </div>
+
+        <div class="skill-panel" id="backend">
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>Spring Boot</h3><span class="skill-icon">🍃</span>
+                </div>
+                <p>Java backend application development</p>
+                <div class="skill-level"><span style="width:75%"></span></div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>JDBC</h3><span class="skill-icon">🔗</span>
+                </div>
+                <p>Java database connectivity</p>
+                <div class="skill-level"><span style="width:75%"></span></div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>Servlets</h3><span class="skill-icon">⚙️</span>
+                </div>
+                <p>Java web application development</p>
+                <div class="skill-level"><span style="width:70%"></span></div>
+            </div>
+        </div>
+
+        <div class="skill-panel" id="database">
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>MySQL</h3><span class="skill-icon">🗄️</span>
+                </div>
+                <p>Relational database management</p>
+                <div class="skill-level"><span style="width:80%"></span></div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>SQL</h3><span class="skill-icon">📊</span>
+                </div>
+                <p>Queries, joins and database operations</p>
+                <div class="skill-level"><span style="width:80%"></span></div>
+            </div>
+        </div>
+
+        <div class="skill-panel" id="iot">
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>Internet of Things</h3><span class="skill-icon">📡</span>
+                </div>
+                <p>IoT-based application development</p>
+                <div class="skill-level"><span style="width:75%"></span></div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>Sensor Integration</h3><span class="skill-icon">🔌</span>
+                </div>
+                <p>Sensor-based monitoring systems</p>
+                <div class="skill-level"><span style="width:70%"></span></div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>Embedded Systems</h3><span class="skill-icon">💻</span>
+                </div>
+                <p>Hardware and software integration</p>
+                <div class="skill-level"><span style="width:65%"></span></div>
+            </div>
+        </div>
+
+        <div class="skill-panel" id="tools">
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>VS Code</h3><span class="skill-icon">📝</span>
+                </div>
+                <p>Code editor and development environment</p>
+                <div class="skill-level"><span style="width:85%"></span></div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>Eclipse</h3><span class="skill-icon">💡</span>
+                </div>
+                <p>Java development environment</p>
+                <div class="skill-level"><span style="width:80%"></span></div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <h3>Git & GitHub</h3><span class="skill-icon">🐙</span>
+                </div>
+                <p>Version control and source code management</p>
+                <div class="skill-level"><span style="width:75%"></span></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">My Work</p>
+            <h2>Featured <span>Projects</span></h2>
+            <p>Some of the applications and projects I have worked on.</p>
+        </div>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo0mB_RYscRFcbVcD6sz9uaexPjoLGOQ3gZ2ds4aQo5Q&s=10" alt="Smart Cradle System" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Smart Cradle System Using IoT</h3>
+                    <p>An IoT-based smart cradle project designed to support baby monitoring through connected sensors and automated features.</p>
+                    <span class="project-tag">Internet of Things</span><br>
+                    <a class="project-link" href="https://github.com/bysanivenkatasaisukumar/Smart-Cradle-System-using-IoT-1" target="_blank" rel="noopener noreferrer">View Project ↗</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs1YJhDFcyBqrNn6dJYehp2voLp_m5XvPl7dNKxUjVIeuVbAVBlp_DhVH7&s=10" alt="Smart Garage Door" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Smart Garage Door Using IoT</h3>
+                    <p>An IoT-based garage door concept designed to support remote monitoring and automated door control.</p>
+                    <span class="project-tag">Internet of Things</span><br>
+                    <a class="project-link" href="https://github.com/bysanivenkatasaisaisukumar/Smart-Garage-Door-using-IoT" target="_blank" rel="noopener noreferrer">View Project ↗</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi9_rdK3PsvN5BIi9z5tkpYwcy2emB5aJ4N8L3k4O66g&s=10" alt="Air Pollution Monitoring System" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Air Pollution Monitoring System</h3>
+                    <p>An IoT-based monitoring project focused on collecting environmental data and monitoring air pollution levels.</p>
+                    <span class="project-tag">Internet of Things</span><br>
+                    <a class="project-link" href="https://github.com/bysanivenkatasaisaisukumar/Air-pollution-monitoring-system-using-IoT" target="_blank" rel="noopener noreferrer">View Project ↗</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS59DGKQ0jfegma01kwWT488N_M2LSvFl0f9qLgccDDbA&s=10" alt="Smart Baggage Tracker" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Smart Baggage Tracker Using IoT</h3>
+                    <p>A smart baggage tracking project focused on improving baggage monitoring using IoT technologies.</p>
+                    <span class="project-tag">Internet of Things</span><br>
+                    <a class="project-link" href="https://github.com/bysanivenkatasaisaisukumar/Smart-Baggage-Tracker-using-IoT" target="_blank" rel="noopener noreferrer">View Project ↗</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxQ1ZYAFAOFsV3QDbC_5lL7ZWY2QmZheM3eaYf500MwQ&s=10" alt="Weather Reporting System" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Weather Reporting System Using IoT</h3>
+                    <p>An IoT-based weather reporting project designed to collect and display environmental information.</p>
+                    <span class="project-tag">Internet of Things</span><br>
+                    <a class="project-link" href="https://github.com/bysanivenkatasaisukumar/Weather-Reporting-System-using-IoT" target="_blank" rel="noopener noreferrer">View Project ↗</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGQVovBrRt5YrHuJwfVi_P0MllFsmCgmkrM0YUzCc18w&s=10" alt="E-Mart Application" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>E-MART Application</h3>
+                    <p>An e-commerce application developed using JavaScript, focused on providing an online shopping experience.</p>
+                    <span class="project-tag">JavaScript</span><br>
+                    <a class="project-link" href="https://github.com/bysanivenkatasaisukumar/E-MART-APP" target="_blank" rel="noopener noreferrer">View Project ↗</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://www.illuminz.com/images/swiggy/banner-img.png" alt="Food Booking System" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Food Booking System</h3>
+                    <p>A food ordering application concept designed to provide users with an online food browsing and booking experience.</p>
+                    <span class="project-tag">Web Application</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI1Y5p5nUcO6rSnuA7tZI_R02G-PhhfQU2XAEMz5FMbw&s=10" alt="Online Booking System" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Booking System Online</h3>
+                    <p>An online booking application concept designed to simplify browsing and booking services.</p>
+                    <span class="project-tag">Web Application</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">Academic Background</p>
+            <h2>My <span>Education</span></h2>
+            <p>My academic qualifications and learning journey.</p>
+        </div>
+
+        <div class="education-list">
+
+            <div class="education-card">
+                <div class="education-icon">🎓</div>
+                <div>
+                    <h3>Bachelor of Technology (B.Tech)</h3>
+                    <h4>Annamacharya Institute of Technology and Sciences</h4>
+                    <p>2020 – 2024 | Tirupati</p>
+                </div>
+            </div>
+
+            <div class="education-card">
+                <div class="education-icon">📘</div>
+                <div>
+                    <h3>Intermediate</h3>
+                    <h4>Narayana Jr College</h4>
+                    <p>2018 – 2020 | Vijayawada</p>
+                </div>
+            </div>
+
+            <div class="education-card">
+                <div class="education-icon">🏫</div>
+                <div>
+                    <h3>SSC (10th Class)</h3>
+                    <h4>Vimala English Medium School</h4>
+                    <p>2017 – 2018 | Nandyal</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">LET'S CONNECT</p>
+            <h2>Contact <span>Me</span></h2>
+            <p>Feel free to connect with me through the platforms below.</p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+                <div class="contact-icon">✉</div>
+                <h3>Email</h3>
+                <a href="mailto:saisukumar2003@gmail.com">
+                    saisukumar2003@gmail.com
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">☎</div>
+                <h3>Phone</h3>
+                <a href="tel:+919346036467">
+                    +91 9346036467
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">in</div>
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/venkatasaisukumar"
+                   target="_blank" rel="noopener noreferrer">
+                    Visit LinkedIn Profile ↗
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">⌘</div>
+                <h3>GitHub</h3>
+                <a href="https://github.com/bysanivenkatasaisaisukumar"
+                   target="_blank" rel="noopener noreferrer">
+                    Visit GitHub Profile ↗
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">📍</div>
+                <h3>Location</h3>
+                <p>Vijayawada, India</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">📄</div>
+                <h3>Resume</h3>
+                <a href="https://drive.google.com/drive/folders/12iNeX0c7vyp_A4ukB0grtJp0QZBI69iG"
+                   target="_blank" rel="noopener noreferrer">
+                    View / Download Resume ↗
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- DECLARATION -->
+<section id="declaration">
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="eyebrow">Professional Statement</p>
+            <h2>My <span>Declaration</span></h2>
+        </div>
+
+        <div class="declaration-wrapper">
+            <div class="declaration-mark">“</div>
+
+            <h2>Declaration</h2>
+
+            <p>
+                I hereby declare that the information furnished in this
+                portfolio is true and correct to the best of my knowledge
+                and belief. I take responsibility for the accuracy of
+                the details presented above.
+            </p>
+
+            <div class="declaration-line"></div>
+
+            <h3>BYSANI VENKATA SAI SUKUMAR</h3>
+            <small>Associate Software Engineer</small>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>
+            Designed & Developed by
+            <span>BYSANI VENKATA SAI SUKUMAR</span>
+        </p>
+        <p>© <span id="year"></span> All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+// Mobile navigation
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    menuBtn.textContent = navLinks.classList.contains("show") ? "✕" : "☰";
+});
+
+// Close menu when a navigation link is clicked
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+        menuBtn.textContent = "☰";
+    });
+});
+
+// Skills category switching
+const skillTabs = document.querySelectorAll(".skill-tab");
+const skillPanels = document.querySelectorAll(".skill-panel");
+
+skillTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        skillTabs.forEach(item => item.classList.remove("active"));
+        skillPanels.forEach(panel => panel.classList.remove("active"));
+
+        tab.classList.add("active");
+
+        const target = document.getElementById(tab.dataset.target);
+
+        if (target) {
+            target.classList.add("active");
+        }
+    });
+});
+
+// Current year in footer
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
